@@ -1,7 +1,7 @@
 # Getting-and-Cleaning-Data-Coursera
 Getting-and-Cleaning-Data Course from Coursera
 
-The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
+The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set.
 
 One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
 
@@ -17,4 +17,18 @@ Extracts only the measurements on the mean and standard deviation for each measu
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names. 
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Detail explaination:
+
+Transformation:
+1. Read trainings files (X_train.txt, Y_train.txt, subject_train.txt) from "UCI HAR Dataset/train folder" and store them into 1 variable name training
+2. Read testing files (X_test.txt, Y_test.txt, subject_test.txt)  from "UCI HAR Dataset/test folder" and store them into 1 variable name testing
+3. Read activity labels file (activity_labels.txt) from main "UCI HAR Dataset" folder and store into 1 variable name activityLabels
+4. Read features file (features.txt) from main "UCI HAR Dataset" folder and store into 1 variable name features
+5. Merges training and test sets into 1 variable name allData
+6.  Get the subset of data contain Mean and Std and store into 1 variable name MeanStdData
+7. Add 2 new columns - Activity and Subject
+8. Assign descriptive name from activity labels to name the activities
+9. Labels data set with descriptive variable names
+10. Creates a second independent tidy data and write into tidy_data.txt in current working directory
 
