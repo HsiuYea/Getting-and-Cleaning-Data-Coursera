@@ -1,0 +1,25 @@
+Getting and Cleaning Data Course Project CodeBook
+
+This file the variables, the data, and any transformations or work that I performed to clean up the data required for Course Project under Coursera 
+Getting and Cleaning Data.
+
+
+SOURCE DATA:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+CONTENT AND EXPLAINATION FOR run_analysis.R 
+Data : Data from Source Data URL downloaded and unzip into Local. Set as working directory in R
+
+Transformation:
+1. Read trainings files (X_train.txt, Y_train.txt, subject_train.txt) from "UCI HAR Dataset/train folder" and store them into 1 variable name training
+2. Read testing files (X_test.txt, Y_test.txt, subject_test.txt)  from "UCI HAR Dataset/test folder" and store them into 1 variable name testing
+3. Read activity labels file (activity_labels.txt) from main "UCI HAR Dataset" folder and store into 1 variable name activityLabels
+4. Read features file (features.txt) from main "UCI HAR Dataset" folder and store into 1 variable name features
+5. Merges training and test sets into 1 variable name allData
+6.  Get the subset of data contain Mean and Std and store into 1 variable name MeanStdData
+7. Add 2 new columns - Activity and Subject
+8. Assign descriptive name from activity labels to name the activities
+9. Labels data set with descriptive variable names
+10. Creates a second independent tidy data and write into tidy_data.txt in current working directory
+
+
